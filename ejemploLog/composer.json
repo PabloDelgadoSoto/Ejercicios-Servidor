@@ -1,0 +1,11 @@
+{
+    "name": "alumno/test",
+    "type": "project",
+    "minimum-stability": "stable",
+    "require": {
+        "monolog/monolog": "^3.5"
+    },
+    "autoload": {
+        "psr-4": {"Dawes\\": "app/Dawes"}
+    }
+}
