@@ -5,14 +5,15 @@ include_once "Navegacion.php";
 include_once "Escritor.php";
 
 $request = $_POST;
-//hace falta navegacion porque sino al iniciar sale el mensaje de error
+
 if(Navegacion::esComprar($request)){
-    if(Cliente::esCorrecto($request)){
+    //validacion en el cliente
+    if(Cliente::esCorrecto($request) && Escritor::esCorrecto($request) && Producto::esCorrecto($request)){
+        //valido todo incluso producto por si se modifica algo en el select del formulario
         $cliente = Cliente::crear($request);
         $producto = Producto::obtenerProducto($request);
         $producto->calcularTransporte($cliente);
         $producto->calcularTotal();
-        
         Escritor::pintar($request, $cliente, $producto);
         include_once "ticket.php";
     } else {

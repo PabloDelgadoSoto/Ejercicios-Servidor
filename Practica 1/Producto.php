@@ -51,6 +51,13 @@ class Producto{
         return $this->total;
     }
 
+    public static function esCorrecto($valor){
+        if(isset($valor[Producto::MUEBLE])){
+            return true;
+        }
+        return false;
+    }
+
     public static function crearProductos(){
         $sofa3 = new Producto(Producto::SOFA_3, Producto::DOSCIENTOS);
         $sofa4 = new Producto(Producto::SOFA_4, Producto::DOSCIENTOS_CINCUENTA);

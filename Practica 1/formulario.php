@@ -42,10 +42,10 @@
                 <?php if (isset($_POST[Producto::MUEBLE]) && $_POST[Producto::MUEBLE] == Producto::LAVADORA ) echo SELECTED;?>><?= Producto::LAVADORA ?></option>
         </select><br/><br/>
 
-        <input type="radio" name="<?= Escritor::HTML ?>" value="<?= Escritor::HTML ?>" 
-            <?php if (isset($_POST[Escritor::HTML]) && $_POST[Escritor::HTML]== Escritor::HTML ) echo CHECKED;?>><?= Escritor::HTML ?></button>
-        <input type="radio" name="<?= Escritor::MD ?>" value="<?= Escritor::MD ?>" 
-            <?php if (isset($_POST[Escritor::MD]) && $_POST[Escritor::MD]== Escritor::MD ) echo CHECKED;?>><?= Escritor::MD ?></button><br/><br/>
+        <input type="radio" name="<?= Escritor::RADIO ?>" value="<?= Escritor::HTML ?>" 
+            <?php if (isset($_POST[Escritor::RADIO]) && $_POST[Escritor::RADIO]== Escritor::HTML ) echo CHECKED;?>><?= Escritor::HTML ?></button>
+        <input type="radio" name="<?= Escritor::RADIO ?>" value="<?= Escritor::MD ?>" 
+            <?php if (isset($_POST[Escritor::RADIO]) && $_POST[Escritor::RADIO]== Escritor::MD ) echo CHECKED;?>><?= Escritor::MD ?></button><br/><br/>
 
         <input type="submit" name="<?= Navegacion::COMPRAR ?>" value="<?= Navegacion::COMPRAR ?>">
     </form>
