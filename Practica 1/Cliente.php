@@ -7,7 +7,7 @@ class Cliente {
     const DIRECCION = "Direccion";
     const MUNICIPIO = "Municipio";
     const CODIGO_POSTAL = "CodigoPostal";
-
+    //codigos postal con comportamiento diferente
     const BALEARES = "07";
     const CANARIAS_1 = "35";
     const CANARIAS_2 = "38";
